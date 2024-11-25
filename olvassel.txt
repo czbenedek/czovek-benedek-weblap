@@ -1,0 +1,6 @@
+Név:    Czövek Benedek
+URL:    
+Leírás: A 'Tarka Kollégium' című weboldalam több funkciót is ellát, többek között kedvet csinál a jövőbeni kollegistáknak a beköltözéshez. Emellett fontos funkciója, hogy a már bentlakók értesíteni tudják a vezetőséget a felmerülő problémáikról.
+JS:     
+Font:   
+Átvett dolgok:  
