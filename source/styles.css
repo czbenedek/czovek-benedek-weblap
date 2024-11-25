@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #ffd1e6;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #93cdff;
+    text-align: center;
+    padding: 25px 5px 25px 5px;
+    border: dotted 2px red;
+    
+}
+
+footer p {
+    border: dotted 2px green;
+    color: #fff2f9;
+}
+
+
+/* Navigáció formázása */
+
+.logo {
+    border: dotted 2px green;
+}
+
+nav {
+    padding: 8px;
+    border: dotted 2px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: -2;
+    flex-basis: 100%;
+}
+
+nav ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border: dotted 2px green;
+}
+
+nav li a {
+
+    display: block;
+    padding: 8px;
+    margin-bottom: 6px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+nav li a#aktiv {
+    background-color: #93cdff;
+    color: #fff2f9;
+}
+
+nav li a:hover,
+nav li a#aktiv:hover {
+    background-color: #ff93cd;
+}
+
+
+/* Tartalom formázása */
+
+.cim {
+    text-align: left;
+    padding-left: 20px;
+    border: dotted 2px red;
+    margin: 15px 0 0 0;
+    flex-basis: 100%;
+}
+
+
+.szovegdoboz p {
+    border: dotted 2px green;
+    text-align: justify;
+    padding: 0 20px 0 20px;
+}
+
+.szovegdoboz {
+    align-content: center;
+}
+
+.fenykep {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    overflow: hidden;
+    border: dotted 2px red;
+    width: 100%;
+}
+
+.fenykep img {
+    height: 400px;
+    object-fit: cover;
+    transform: scale(0.95);
+    border: dotted 2px green;
+
+
+}
+p {
+    margin: 0;
+}
+
+.vastag {
+    font-weight: bolder;
+}
+
+@media all and (min-width: 600px) {
+    body {
+        flex-direction: row;
+    }
+
+    nav {
+
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 15px;
+        width: 100%;
+
+    }
+
+    nav li {
+        flex-basis: 20%;
+    }
+
+    nav li a {
+        margin: 0;
+    }
+
+    .kep1 {
+        flex-basis: 50%;
+    }
+
+    .cim {
+        order: -1;
+        text-align: center;
+    }
+    .art1 {
+        flex-basis: 50%;
+    }
+
+    .art3 {
+        flex-basis: 50%;
+    }
+    .kep2 {
+        flex-basis: 50%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    nav {
+        flex-direction: row;
+    }
+
+    nav ul {
+        width: 80%;
+    }
+}
