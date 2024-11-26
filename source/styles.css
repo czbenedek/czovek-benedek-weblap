@@ -14,7 +14,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     background-color: #ffd1e6;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0px;
     margin: 0px;
 }
@@ -24,7 +24,7 @@ footer{
     flex-direction: column;
     background-color: #93cdff;
     text-align: center;
-    padding: 25px 5px 25px 5px;
+    flex-basis: 100%;
     border: dotted 2px red;
     
 }
@@ -32,6 +32,7 @@ footer{
 footer p {
     border: dotted 2px green;
     color: #fff2f9;
+    padding: 25px 5px 25px 5px;
 }
 
 
@@ -100,11 +101,29 @@ nav li a#aktiv:hover {
 .szovegdoboz p {
     border: dotted 2px green;
     text-align: justify;
-    padding: 0 20px 0 20px;
+    padding: 20px;
 }
 
 .szovegdoboz {
     align-content: center;
+}
+
+.banner {
+    flex-basis: 100%;
+    background-color: white;
+    margin: 10px 0 10px 0;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    align-content: center;
+}
+
+.banner p {
+    text-align: center;
+    padding: 14px;
+}
+
+.italic {
+    font-style: italic;
 }
 
 .fenykep {
@@ -114,6 +133,7 @@ nav li a#aktiv:hover {
     overflow: hidden;
     border: dotted 2px red;
     width: 100%;
+    align-items: center;
 }
 
 .fenykep img {
@@ -179,12 +199,35 @@ p {
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 868px) {
     nav {
         flex-direction: row;
+    }
+
+    .banner {
+        flex-basis: 70%;
+        border-radius: 15px;
+        border: solid 2px black;
     }
 
     nav ul {
         width: 80%;
     }
+    .kep1 {
+        flex-basis: 35%;
+    }
+    .art1 {
+        flex-basis: 35%;
+    }
+    .art2 {
+        flex-basis: 70%;
+
+    }
+    .art3 {
+        flex-basis: 35%;
+    }
+    .kep2 {
+        flex-basis: 35%;
+    }
+
 }
