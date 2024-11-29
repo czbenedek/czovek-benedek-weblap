@@ -1,6 +1,14 @@
 Név:    Czövek Benedek
-URL:    
+
+URL:    https://czbenedek.github.io/czovek-benedek-weblap/
+
 Leírás: A 'Tarka Kollégium' című weboldalam több funkciót is ellát, többek között kedvet csinál a jövőbeni kollegistáknak a beköltözéshez. Emellett fontos funkciója, hogy a már bentlakók értesíteni tudják a vezetőséget a felmerülő problémáikról.
-JS:     
-Font:   
+
+JS:     A 'jelszo.html' oldalon javascript kód a kliens oldalon kezeli a felhasználó által beírt értéket, és annak függvényében ad visszajelzést.
+
+        Az 'index.html' oldal alsó képe javascript kóddal magától változik
+
+
+Font:   'Parkinsans' (google web font) betűtípus a: h3,h4, .cim elemeknél
+
 Átvett dolgok:  
