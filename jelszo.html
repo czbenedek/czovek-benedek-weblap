@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tarka Kollégium
+    </title>
+    <meta name="author" content="Czövek Benedek">
+    <meta name="description"
+        content="A Tarka kollégium weboladal, mely az információk átadása mellett visszajelzésre és kikapcsolódásra is lehetőséget ad.">
+    <link rel="icon" href="source/icon.png" sizes="32x32">
+    <link rel="stylesheet" href="source/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="source/icon.png" alt="Kép a tarkaréti kollégium bejáratáról"></a>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szobak.html">Szobák</a></li>
+            <li><a href="kozosseg.html">Közösség</a></li>
+            <li><a id="aktiv" href="#">Jelszó</a></li>
+            <li><a href="ugyintezes.html">Ügyintézés</a></li>
+        </ul>
+    </nav>
+    <h2 class="cim">JELSZAVAS JÁTÉK</h2>
+    <article class="szovegdoboz art2">
+        <p>
+            A kollégium informatikai rendszeréhez új jelszót keresünk. Kérlek adjatok ötleteket megfelelő bonyolultságú
+            jelszavakra. Amennyiben az általad ajánlott jelszó megfelel a kritériumoknak, akár rendszergazdai
+            hozzáférést is kaphatsz a hálózatunkhoz!<br>
+            A rendszer továbbá ajánlatot ad, hogyan tehetnéd még erősebbé a jelszót!
+            <br><br>
+            Néhány fontos kitétel:<br>
+            Kell tartalmaznia kisbetűt<br>
+            Kell tartalmaznia nagybetűt<br>
+            Kell tartalmaznia számot<br>
+            Kell tartalmaznia speciális karaktert<br>
+            Mi nem vagyunk hívei a csak lassan és nehezen begépelhető jelszavaknak, ezért bármilyen hosszúságút
+            megadhattok.
+        </p>
+
+        <p id="valasz"></p>
+
+
+        <form class="jelszoform">
+            <input type="text" size="10" name="jelszo" id="jelszobox">
+            <input type="button" id="ellenorzes" value="Ellenőrzes">
+        </form>
+
+    </article>
+
+
+
+
+
+
+    <article class="szovegdoboz art1">
+        <h4>Miért foglalkozunk ennyit a jelszavakkal?</h4>
+        <p>
+            Az erős jelszó az online biztonság alapköve. Egy biztonságos jelszó megnehezíti a rosszindulatú támadók
+            számára, hogy hozzáférjenek személyes adataihoz, például banki információkhoz, e-mail fiókokhoz vagy
+            közösségi média profilokhoz. Az egyszerű, könnyen kitalálható jelszavak, mint például a „123456” vagy a
+            „password”, szinte semmilyen védelmet nem nyújtanak. Egy erős jelszó azonban összetett, tartalmaz számokat,
+            betűket és különleges karaktereket, ami drámaian megnöveli a feltöréséhez szükséges időt és erőfeszítést.
+        </p>
+    </article>
+
+    <div class="fenykep kep1">
+        <img src="source/atmeneti.jpg" alt="Kép a tarkaréti kollégium bejáratáról">
+    </div>
+
+    <article class="banner2">
+        <h3>Problémába ütköztél?</h3>
+        <p>Jelezd nekünk az <a href="ugyintezes.html">Ügyintézés oldalon</a> hogy minél hamarabb kijavíthassuk</p>
+    </article>
+
+    <article class="szovegdoboz art2">
+        <h4>Online tér</h4>
+        <p>
+            Az online térben végrehajtott támadások, például az úgynevezett brute force támadások, automatikus
+            próbálkozásokkal igyekeznek kitalálni a jelszót. Egy erős jelszó azonban elég hosszú és bonyolult ahhoz,
+            hogy ezek a módszerek ne érjenek célt. Például egy 8 karakteres, véletlenszerű jelszó feltörése akár éveket
+            is igénybe vehet a modern számítógépekkel. Ezért a hosszabb és véletlenszerű jelszavak használata a legjobb
+            védekezés az ilyen típusú támadások ellen.</p>
+    </article>
+
+    <article class="szovegdoboz art1">
+        <h4>Friss jelszavak</h4>
+        <p>
+            Az erős jelszó nemcsak egyedi, hanem személyes adataink biztonságát is garantálja, különösen, ha több
+            fiókhoz különböző jelszavakat használunk. Ha ugyanazt a jelszót használjuk mindenhol, akkor egyetlen fiók
+            kompromittálása az összes többihez is hozzáférést biztosíthat a támadók számára. Ezért fontos a jelszavak
+            rendszeres frissítése és a jelszókezelő alkalmazások használata, amelyek megkönnyítik a sok különböző és
+            erős jelszó biztonságos tárolását.</p>
+    </article>
+    <div class="fenykep kep1">
+        <img id="slidekep" src="source/kilatas3.jpg" alt="Kép a kilátásról.">
+    </div>
+
+    <article class="szovegdoboz art1">
+        <h4>Barátaink védelme</h4>
+        <p>
+            Végül, az erős jelszóval nemcsak magunkat, hanem másokat is megvédhetünk. Ha például egy gyenge jelszó miatt
+            feltörik az e-mail fiókunkat, és onnan spamet vagy kártékony linkeket küldenek ismerőseinknek, az ő
+            biztonságukat is veszélyeztethetjük. Az erős jelszó tehát az online közösségünk biztonságának egyik alapvető
+            eleme. Az adatok védelme érdekében érdemes időt és figyelmet fordítani a megfelelő jelszavak megalkotására
+            és kezelésére.
+        </p>
+    </article>
+
+    <article class="szovegdoboz art1">
+        <h4>"Sharing is caring"</h4>
+        <p>
+            Osszátok meg jelszavaitokat barátaitokkal, ismerőseitekkel is. Így ők is tanulhatnak belőle, milyen egy jó
+            jelszó. Ha úgy érzed, valamelyik ismerősödnek jobb jelszóra van szüksége, vagy csak szereti a
+            szerencsejátékokat, akkor küldd el neki is a Tarka Koli weboldalát. Reméljük a kellemes és hasznos weblapunk
+            minél több emberhez el tud jutni. Nektek pedig további biztonságos netezést, és kellemes ünnepeket kíván
+            nektek a Tarka Koli csapata teljes csapata.
+        </p>
+    </article>
+
+    <footer>
+        <p>Az oldalon megjelenő információk és képek csak személyes vélemények, és nem a Tarkaréti kollégium hivatalos
+            álláspontját képviselik</p>
+    </footer>
+
+
+    <script src="source/js/program.js"></script>
+</body>
+
+</html>

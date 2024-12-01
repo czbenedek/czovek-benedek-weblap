@@ -6,9 +6,9 @@ Leírás: A 'Tarka Kollégium' című weboldalam több funkciót is ellát, töb
 
 JS:     A 'jelszo.html' oldalon javascript kód a kliens oldalon kezeli a felhasználó által beírt értéket, és annak függvényében ad visszajelzést.
 
-        Az 'index.html' oldal alsó képe javascript kóddal magától változik
+        Az 'index.html' oldal alsó képe javascript kóddal magától váltakozik.
 
 
 Font:   'Parkinsans' (google web font) betűtípus a: h3,h4, .cim elemeknél
 
-Átvett dolgok:  
+Átvett dolgok:  A weboldalon szereplő szövegek megírásához, és a javascript javításához ChatGPT-t használtam.

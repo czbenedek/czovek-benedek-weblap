@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tarka Kollégium
+    </title>
+    <meta name="author" content="Czövek Benedek">
+    <meta name="description"
+        content="A Tarka kollégium weboladal, mely az információk átadása mellett visszajelzésre és kikapcsolódásra is lehetőséget ad.">
+    <link rel="icon" href="source/icon.png" sizes="32x32">
+    <link rel="stylesheet" href="source/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="source/icon.png" alt="Kép a tarkaréti kollégium bejáratáról"></a>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="szobak.html">Szobák</a></li>
+            <li><a href="kozosseg.html">Közösség</a></li>
+            <li><a href="jelszo.html">Jelszó</a></li>
+            <li><a id="aktiv" href="#">Ügyintézés</a></li>
+        </ul>
+    </nav>
+
+    <article class="szovegdoboz art2">
+        <h2 class="cim">Visszajelzés a problémákról</h2>
+        <p>
+            Ez az űrlap kiváló eszköz a problémák visszajelzésére, mert lehetőséget ad a felhasználóknak arra, hogy
+            strukturált és célzott módon osszák meg tapasztalataikat vagy nehézségeiket. Az egyszerűen használható mezők
+            biztosítják, hogy a válaszadás gyors és akadálymentes legyen, miközben az egyes inputtípusok (pl. szöveg,
+            dátum, szám) lehetővé teszik a pontos és releváns információk begyűjtését.</p>
+    </article>
+
+
+
+    <div id="urlapbox">
+
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" class="fullurlap">
+            <h4 class="urlapcim">Űrlap</h4>
+            <div class="urlap1">
+                <label>
+                    Név:
+                    <br>
+                    <input required type="text" size="20" name="nev" list="nevek" placeholder="Ide írj">
+                    <datalist id="nevek">
+                        <option value="Vince Sipos"></option>
+                        <option value="Áron Tóth"></option>
+                        <option value="Johanna Barta"></option>
+                        <option value="Szandra Farkas"></option>
+                        <option value="Barna Pál"></option>
+                        <option value="Valéria Molnár"></option>
+                        <option value="Rudolf Barta"></option>
+                        <option value="Richárd Péter"></option>
+                        <option value="Dorina Szalai"></option>
+                        <option value="Zsolt Dobos"></option>
+                        <option value="Zsolt Dobos"></option>
+                        <option value="Evelin Pataki"></option>
+                        <option value="Kevin Horváth"></option>
+                        <option value="Albert Csonka"></option>
+                        <option value="Henriett Török"></option>
+                    </datalist>
+                </label>
+
+                <br>
+
+                <label>
+                    Neptun kod:
+                    <br>
+                    <input required type="password" size="6" name="neptun">
+                </label>
+
+                <br>
+
+                <label>
+                    Szobaszám:
+                    <br>
+                    <input type="number" name="szoba" value="101" min="" max="500" step="5">
+                </label>
+
+                <br>
+
+                <label>
+                    Mennyire sürgős a probléma?
+                    <br>
+                    <select name="surgos">
+                        <option value="1">Nem fontos</option>
+                        <option value="2">Ráér</option>
+                        <option selected value="3">Átlagos</option>
+                        <option value="4">Szorít az idő</option>
+                        <option value="5">Sürgős</option>
+                    </select>
+                </label>
+                <br>
+                <label>
+                    Mikor jött elő a probléma?
+                    <br>
+                    <input type="date" name="datum" required>
+                </label>
+
+
+            </div>
+
+            <div class="urlap2">
+                Mikkel van probléma?
+                <br>
+                <label>
+                    <input type="checkbox" name="mikro">Mikrohullámú sütő
+                </label><label>
+                    <br>
+                    <input type="checkbox" name="mosdo">Mosdó
+                    <br>
+                </label><label>
+                    <input type="checkbox" name="lampa">Világítás
+                    <br>
+                </label><label>
+                    <input type="checkbox" name="zaj">Másik lakók viselkedése
+                    <br>
+                </label><label>
+                    <input type="checkbox" name="furdo">Zuhanyzó
+                    <br>
+                </label>
+            </div>
+
+
+            <div class="urlap3">
+                Felhasználhatjuk adataidat az oldal használati statisztikáiban?
+                <br>
+                <label><input type="radio" name="stat" value="1" checked>Igen</label>
+                <br>
+                <label><input type="radio" name="stat" value="0">Nem</label>
+            </div>
+
+            <div class="urlapsend">
+                <input type="submit" value="Küldés">
+                <input type="reset" value="Visszaállítás">
+            </div>
+
+        </form>
+    </div>
+
+    </div>
+
+    <article class="szovegdoboz art2">
+        <p>
+            Miért kérjük hogy hozzájárulj a statisztikánkhoz?<br>
+            A jó döntésel meghozatalához szükséges elemzéseket elvégezni. Ilyen elemzés például a TOWS elemzés. Reméljük
+            hozzájárulsz a statisztikánk minőségének javításához azzal, hogy engedélyt adsz az adataid felhasználására.
+
+        </p>
+    </article>
+
+
+
+    <div class="fenykepbanner">
+        <img src="source/tows.jpg" alt="A statisztikák és elemzések fontosak">
+    </div>
+
+    <article class="szovegdoboz art2">
+        <p>
+            Köszönjük, hogy időt szánt a kérdőív kitöltésére! Nagyra értékeljük, hogy segít minket a véleményével,
+            hiszen minden visszajelzés kulcsfontosságú ahhoz, hogy szolgáltatásainkat folyamatosan fejleszthessük és a
+            felhasználói élményt még jobban a várakozásokhoz igazíthassuk. Az Ön válaszai segítenek nekünk abban, hogy
+            jobban megértsük a felhasználói igényeket és a problémákat, így hatékonyabban tudunk reagálni a jövőbeli
+            kihívásokra. Mivel a visszajelzés mindkét fél számára értékes, mindig arra törekszünk, hogy a lehető legjobb
+            megoldásokat kínáljuk.
+
+        </p>
+    </article>
+
+    <article class="banner">
+        <h3>FIGYELEM</h3>
+        <p>Még mindig tudtok jelentkezni a <a href="jelszo.html">jelszavas játékunkra</a> úgyhogy mindent bele! </p>
+    </article>
+
+    <article class="szovegdoboz art2">
+        <p>
+            Minden kitöltött kérdőív egy lépés afelé, hogy a szolgáltatásainkat még inkább az Önök igényeihez
+            igazíthassuk. Fontos számunkra, hogy minden egyes véleményt és javaslatot figyelembe vegyünk, és amennyiben
+            szükséges, azokat beépítsük a fejlesztési folyamatainkba. Ha bárminemű kérdése van, vagy szeretne további
+            részleteket megosztani velünk, ne habozzon kapcsolatba lépni! Az Ön véleménye valóban segít abban, hogy még
+            jobbá váljunk, és mi mindig szívesen fogadjuk a konstruktív visszajelzéseket.</p>
+    </article>
+
+
+    <footer>
+        <p>Az oldalon megjelenő információk és képek csak személyes vélemények, és nem a Tarkaréti kollégium hivatalos
+            álláspontját képviselik</p>
+    </footer>
+
+
+    <script src="source/js/program.js"></script>
+</body>
+
+</html>
