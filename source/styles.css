@@ -19,18 +19,16 @@ body {
     margin: 0px;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     background-color: #93cdff;
     text-align: center;
     flex-basis: 100%;
-    border: dotted 2px red;
-    
+    border-top: solid white 2px;
 }
 
 footer p {
-    border: dotted 2px green;
     color: #fff2f9;
     padding: 25px 5px 25px 5px;
 }
@@ -38,18 +36,14 @@ footer p {
 
 /* Navigáció formázása */
 
-.logo {
-    border: dotted 2px green;
-}
-
 nav {
     padding: 8px;
-    border: dotted 2px red;
     display: flex;
     flex-direction: column;
     align-items: center;
     order: -2;
     flex-basis: 100%;
+    border-bottom: solid white 4px;
 }
 
 nav ul {
@@ -59,7 +53,6 @@ nav ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    border: dotted 2px green;
 }
 
 nav li a {
@@ -72,7 +65,7 @@ nav li a {
     text-align: center;
     text-decoration: none;
     color: black;
-    
+
 
 }
 
@@ -84,47 +77,74 @@ nav li a#aktiv {
 nav li a:hover,
 nav li a#aktiv:hover {
     background-color: #ff93cd;
+    color: #fff2f9;
 }
 
-h3, h4 {
+h3,
+h4 {
     text-align: center;
     padding-top: 15px;
     font-family: "Parkinsans", sans-serif;
 }
+
 /* Tartalom formázása */
 
 .cim {
     text-align: left;
     padding-left: 20px;
-    border: dotted 2px red;
     margin: 15px 0 0 0;
     flex-basis: 100%;
     font-family: "Parkinsans", sans-serif;
 }
 
+#valasz {
+    display: none;
+
+}
 
 .szovegdoboz p {
-    border: dotted 2px green;
     text-align: justify;
     padding: 20px;
+}
+
+.jelszoform {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 30px 0;
 }
 
 .szovegdoboz {
     align-content: center;
 }
 
+
+
+
 .banner {
     flex-basis: 100%;
-    background-color: white;
+    background-color: #ff93cd;
     margin: 10px 0 10px 0;
     border-top: solid 2px black;
     border-bottom: solid 2px black;
     align-content: center;
 }
 
-.banner p {
+.banner2 {
+    flex-basis: 100%;
+    background-color: #93cdff;
+    margin: 10px 0 10px 0;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    align-content: center;
+}
+
+.banner>*,
+.banner>*>*,
+.banner2>*,
+.banner2>*>* {
     text-align: center;
-    padding: 14px;
+    padding-bottom: 14px;
+    color: white;
 }
 
 .italic {
@@ -136,25 +156,106 @@ h3, h4 {
     justify-content: center;
     flex-basis: 100%;
     overflow: hidden;
-    border: dotted 2px red;
-    width: 100%;
+    max-width: 98%;
     align-items: center;
+    margin: 1%;
 }
 
 .fenykep img {
     height: 400px;
     object-fit: cover;
     transform: scale(0.95);
-    border: dotted 2px green;
-
-
 }
+
+.fenykepbanner {
+    flex-shrink: 10;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    overflow: hidden;
+    align-items: center;
+    zoom: 0.35;
+
+    max-width: 100%;
+}
+
 p {
     margin: 0;
 }
 
 .vastag {
     font-weight: bolder;
+}
+
+/* Űrlap formázásai */
+
+.fullurlap>* {
+    padding: 0 0 20px 20px;
+
+}
+
+.fullurlap {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 20px;
+    border: solid black 2px;
+}
+
+.fullurlap input,
+option,
+select {
+    background-color: #ffd1e6;
+}
+
+.urlapsend {
+    text-align: center;
+}
+
+#urlapbox {
+    display: flex;
+    flex-basis: 100%;
+}
+
+.urlapcim {
+    padding: 0 0 20px 0;
+}
+
+/* Galéria formázásai */
+
+.slider {
+    width: 90%;
+    min-width: 400px;
+    margin: 20px auto;
+
+}
+
+.slick-slide {
+    margin: 0px 5px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out 0.8s;
+    opacity: .3;
+}
+
+.slick-active {
+    opacity: .7;
+}
+
+.slick-current {
+    opacity: 1;
 }
 
 @media all and (min-width: 600px) {
@@ -184,55 +285,88 @@ p {
         margin: 0;
     }
 
-    .kep1 {
+    .fullurlap {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .urlap1,
+    .urlap2 {
         flex-basis: 50%;
+    }
+
+    .urlap3,
+    .urlapsend,
+    .urlapcim {
+        flex-basis: 100%;
+    }
+
+    .kep1,
+    .art1 {
+        flex-basis: 48%;
+        margin: 1%;
     }
 
     .cim {
         order: -1;
         text-align: center;
     }
-    .art1 {
-        flex-basis: 50%;
-    }
 
-    .art3 {
-        flex-basis: 50%;
-    }
-    .kep2 {
-        flex-basis: 50%;
-    }
+
 }
 
-@media all and (min-width: 868px) {
+@media all and (min-width: 900px) {
     nav {
         flex-direction: row;
     }
 
+    .slider {
+        width: 70%;
+    }
+
     .banner {
         flex-basis: 70%;
-        border-radius: 15px;
+        border-radius: 40px;
         border: solid 2px black;
+    }
+
+    .banner2 {
+        flex-basis: 70%;
+        border-radius: 40px;
+        border: solid 2px white;
     }
 
     nav ul {
         width: 80%;
     }
-    .kep1 {
-        flex-basis: 35%;
-    }
-    .art1 {
-        flex-basis: 35%;
-    }
-    .art2 {
-        flex-basis: 70%;
 
+
+    .urlap1,
+    .urlap2,
+    .urlap3 {
+        flex-basis: 33%;
     }
-    .art3 {
-        flex-basis: 35%;
+
+    .urlapsend {
+        flex-basis: 100%;
     }
-    .kep2 {
-        flex-basis: 35%;
+
+
+    .kep1,
+    .art1 {
+        flex-basis: 34%;
+        margin: 1%;
+    }
+
+
+    .art2,
+    #urlapbox,
+    .fenykepbanner {
+        flex-basis: 70%;
+    }
+
+    .fenykepbanner {
+        border-radius: 100px;
     }
 
 }
