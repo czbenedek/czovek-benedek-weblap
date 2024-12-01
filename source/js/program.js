@@ -1,9 +1,32 @@
-document.getElementById(`ellenorzes`).addEventListener(`click`, jelszoEll)
+function kepSlide() {
+    let kepElem = document.getElementById('slidekep');
+    setTimeout(function () {
+        kepElem.src = "source/kilatas3.jpg";
+    }, 750)
+    setTimeout(function () {
+        kepElem.src = "source/kilatas2.jpg";
+    }, 2250)
+    setTimeout(function () {
+        kepElem.src = "source/kilatas1.jpg";
+    }, 3000)
+    setTimeout(function () {
+        kepElem.src = "source/kilatas2.jpg";
+    }, 4500)
+    setTimeout(kepSlide, 4500)
+}
+
+if (document.location.pathname.includes("index.html")) {
+    kepSlide()
+}
+
+if (document.location.pathname.includes("jelszo.html")) {
+    document.getElementById(`ellenorzes`).addEventListener(`click`, jelszoEll)
+}
 
 function jelszoEll() {
     const jelszo = document.getElementById("jelszobox").value;
+    let ujjelszo = jelszo
 
-   
     const kis = `abcdefghijklmnopqrstuvwxyz`;
     const nagy = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
     const szam = `0123456789`;
@@ -13,11 +36,11 @@ function jelszoEll() {
     let vanszam = false;
     let vanspec = false;
     let baj = false;
-    
+
     for (let i = 0; i < jelszo.length; i++) {
         const betu = jelszo[i];
 
-        
+
         if (kis.indexOf(betu) !== -1) {
             vankis = true;
         }
@@ -32,36 +55,40 @@ function jelszoEll() {
         }
     }
 
-    let kiiras = "A jelszónak tartalmaznia kell"
+    let kiiras = "A jelszónak tartalmaznia kell:<br>"
     if (vankis == false) {
         kiiras = kiiras + " kisbetűt,";
-        baj=true
+        baj = true;
+        ujjelszo = ujjelszo + "a"
     }
     if (vannagy == false) {
         kiiras = kiiras + " Nagybetűt,";
-        baj=true
+        baj = true;
+        ujjelszo = ujjelszo + "A"
     }
     if (vanszam == false) {
-        kiiras = kiiras + " 5z4`m0t,";
-        baj=true
+        kiiras = kiiras + " Szám0t,";
+        baj = true;
+        ujjelszo = ujjelszo + "1";
     }
     if (vanspec == false) {
-        kiiras = kiiras + " $pec|áL|$ karaktert (pl: .,!?),";
-        baj=true
+        kiiras = kiiras + " $peciáli$ karaktert (pl: .,!?),";
+        baj = true;
+        ujjelszo = "!" + ujjelszo;
     }
-    kiiras = kiiras.substring(0,(kiiras.length)-1)
-   
-    kiiras = kiiras + " is"
+    kiiras = kiiras.substring(0, (kiiras.length) - 1)
 
+    kiiras = kiiras + ` is <br> Mit szólnál ehhez a jelszóhoz: ${ujjelszo}`
 
-        if (baj==true) {
+    document.getElementById("valasz").style.display = "inherit"
 
+    if (baj == true) {
+        document.getElementById("valasz").innerHTML = `${kiiras}`
+    }
 
-            alert(`${kiiras}`)
-        }
-
-        else {
-            alert(`Köszönjük a részvételt`)
-        }
+    else {
+        
+        document.getElementById("valasz").innerHTML = `Ez egy szuper ötlet! Be is kerültél a sorsolásunkba!`
+    }
 
 }
