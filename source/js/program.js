@@ -55,26 +55,33 @@ function jelszoEll() {
         }
     }
 
+    let pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
+    let kispozicio = Math.floor(Math.random() * (kis.length + 1));
+    let nagypozicio = Math.floor(Math.random() * (nagy.length + 1));
+    let specpozicio = Math.floor(Math.random() * (spec.length + 1));
     let kiiras = "A jelszónak tartalmaznia kell:<br>"
     if (vankis == false) {
         kiiras = kiiras + " kisbetűt,";
         baj = true;
-        ujjelszo = ujjelszo + "a"
+        pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
+        ujjelszo = ujjelszo.substring(0, pozicio) + kis.substring(kispozicio, kispozicio+1) + ujjelszo.substring(pozicio);
     }
     if (vannagy == false) {
         kiiras = kiiras + " Nagybetűt,";
         baj = true;
-        ujjelszo = ujjelszo + "A"
+        pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
+        ujjelszo = ujjelszo.substring(0, pozicio) + nagy.substring(nagypozicio, nagypozicio+1) + ujjelszo.substring(pozicio);
     }
     if (vanszam == false) {
         kiiras = kiiras + " Szám0t,";
         baj = true;
-        ujjelszo = ujjelszo + "1";
+        pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
+        ujjelszo = ujjelszo.substring(0, pozicio) + Math.floor(Math.random() * 10) + ujjelszo.substring(pozicio);
     }
     if (vanspec == false) {
         kiiras = kiiras + " $peciáli$ karaktert (pl: .,!?),";
         baj = true;
-        ujjelszo = "!" + ujjelszo;
+        ujjelszo = ujjelszo.substring(0, pozicio) + spec.substring(specpozicio, specpozicio+1) + ujjelszo.substring(pozicio);
     }
     kiiras = kiiras.substring(0, (kiiras.length) - 1)
 
