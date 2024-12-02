@@ -42,13 +42,14 @@
 
     <div id="urlapbox">
 
-        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" class="fullurlap">
+        <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" class="fullurlap"
+            id="urlapvalid" novalidate>
             <h4 class="urlapcim">Űrlap</h4>
             <div class="urlap1">
                 <label>
                     Név:
                     <br>
-                    <input required type="text" size="20" name="nev" list="nevek" placeholder="Ide írj">
+                    <input type="text" size="20" name="nev" list="nevek" placeholder="Ide írj">
                     <datalist id="nevek">
                         <option value="Vince Sipos"></option>
                         <option value="Áron Tóth"></option>
@@ -81,7 +82,7 @@
                 <label>
                     Szobaszám:
                     <br>
-                    <input type="number" name="szoba" value="101" min="" max="500" step="5">
+                    <input type="number" name="szoba" value="101" min="" max="500" step="1">
                 </label>
 
                 <br>
@@ -101,7 +102,7 @@
                 <label>
                     Mikor jött elő a probléma?
                     <br>
-                    <input type="date" name="datum" required>
+                    <input type="date" name="datum">
                 </label>
 
 
@@ -194,8 +195,28 @@
             álláspontját képviselik</p>
     </footer>
 
-
-    <script src="source/js/program.js"></script>
+    <script src="source/js/jquery-3.7.1.js"></script>
+    <script src="source/js/jquery-validation-1.19.5/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#urlapvalid").validate({
+                rules: {
+                    nev: "required",
+                    neptun: {required: true,
+                        minlength: 6,
+                        maxlength: 6,},
+                    datum: {required: true,
+                        minDate: "2023-12-01",
+                    },
+                },
+                messages: {
+                    nev: " Válaszd ki a neved!",
+                    neptun: " Írd be a NEPTUN kódod helyesen!",
+                    datum: " Kérlek add meg a probléma dátumát!"
+                },
+            });
+        });
+    </script>
 </body>
 
 </html>
