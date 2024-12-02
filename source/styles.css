@@ -4,6 +4,12 @@
     margin: 0;
 }
 
+label.error {
+    color:darkred;
+}
+
+
+
 html {
     padding: 0px;
     margin: 0px;
@@ -205,9 +211,16 @@ p {
 }
 
 .fullurlap input,
-option,
+option, 
 select {
     background-color: #ffd1e6;
+}
+
+#jelszobox, #ellenorzes {
+    margin: 5px;
+    border: solid 2px black;
+    background-color: white;
+    color: #ff93cd;
 }
 
 .urlapsend {
@@ -226,7 +239,7 @@ select {
 /* Galéria formázásai */
 
 .slider {
-    width: 90%;
+    width: 80%;
     min-width: 400px;
     margin: 20px auto;
 
@@ -246,7 +259,7 @@ select {
 }
 
 .slick-slide {
-    transition: all ease-in-out 0.8s;
+    transition: all ease-in-out 1s;
     opacity: .3;
 }
 
