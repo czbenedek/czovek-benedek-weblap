@@ -9,6 +9,6 @@ JS:     A 'jelszo.html' oldalon javascript kód a kliens oldalon kezeli a felhas
         Az 'index.html' oldal alsó képe javascript kóddal magától váltakozik.
 
 
-Font:   'Parkinsans' (google web font) betűtípus a: h3,h4, .cim elemeknél
+Font:   'Parkinsans' (google web font) betűtípus a: h3,h4,.cim elemeknél (az összes megjelenő cím)
 
-Átvett dolgok:  A weboldalon szereplő szövegek megírásához, és a javascript javításához ChatGPT-t használtam.
+Átvett dolgok:  A weboldalon szereplő szövegek megírásához, és a javascripttel kapcsolatos problémáim megoldásához ChatGPT-t használtam.
