@@ -11,8 +11,8 @@
     <meta name="description"
         content="A Tarka kollégium weboladal, mely az információk átadása mellett visszajelzésre és kikapcsolódásra is lehetőséget ad.">
     <link rel="icon" href="source/icon.png" sizes="32x32">
-    <link type="text/css" rel="stylesheet" href="source/styles.css">
-    <link type="text/css" href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="source/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
 
 </head>
 
@@ -82,7 +82,7 @@
                 <label>
                     Szobaszám:
                     <br>
-                    <input type="number" name="szoba" value="101" min="" max="500" step="1">
+                    <input type="number" name="szoba" value="101" min="101" max="500" step="1">
                 </label>
 
                 <br>
@@ -145,9 +145,7 @@
 
         </form>
     </div>
-
-    </div>
-
+    
     <article class="szovegdoboz art2">
         <p>
             Miért kérjük hogy hozzájárulj a statisztikánkhoz?<br>
@@ -202,10 +200,13 @@
             $("#urlapvalid").validate({
                 rules: {
                     nev: "required",
-                    neptun: {required: true,
+                    neptun: {
+                        required: true,
                         minlength: 6,
-                        maxlength: 6,},
-                    datum: {required: true,
+                        maxlength: 6,
+                    },
+                    datum: {
+                        required: true,
                         minDate: "2023-12-01",
                     },
                 },
