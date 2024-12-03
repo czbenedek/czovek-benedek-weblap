@@ -56,9 +56,9 @@ function jelszoEll() {
     }
 
     let pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
-    let kispozicio = Math.floor(Math.random() * (kis.length + 1));
-    let nagypozicio = Math.floor(Math.random() * (nagy.length + 1));
-    let specpozicio = Math.floor(Math.random() * (spec.length + 1));
+    let kispozicio = Math.floor(Math.random() * (kis.length));
+    let nagypozicio = Math.floor(Math.random() * (nagy.length));
+    let specpozicio = Math.floor(Math.random() * (spec.length));
     let kiiras = "A jelszónak tartalmaznia kell:<br>"
     if (vankis === false) {
         kiiras = kiiras + " kisbetűt,";
