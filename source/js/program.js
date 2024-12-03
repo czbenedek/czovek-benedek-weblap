@@ -60,28 +60,28 @@ function jelszoEll() {
     let nagypozicio = Math.floor(Math.random() * (nagy.length + 1));
     let specpozicio = Math.floor(Math.random() * (spec.length + 1));
     let kiiras = "A jelszónak tartalmaznia kell:<br>"
-    if (vankis == false) {
+    if (vankis === false) {
         kiiras = kiiras + " kisbetűt,";
         baj = true;
         pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
-        ujjelszo = ujjelszo.substring(0, pozicio) + kis.substring(kispozicio, kispozicio+1) + ujjelszo.substring(pozicio);
+        ujjelszo = ujjelszo.substring(0, pozicio) + kis.substring(kispozicio, kispozicio + 1) + ujjelszo.substring(pozicio);
     }
-    if (vannagy == false) {
+    if (vannagy === false) {
         kiiras = kiiras + " Nagybetűt,";
         baj = true;
         pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
-        ujjelszo = ujjelszo.substring(0, pozicio) + nagy.substring(nagypozicio, nagypozicio+1) + ujjelszo.substring(pozicio);
+        ujjelszo = ujjelszo.substring(0, pozicio) + nagy.substring(nagypozicio, nagypozicio + 1) + ujjelszo.substring(pozicio);
     }
-    if (vanszam == false) {
+    if (vanszam === false) {
         kiiras = kiiras + " Szám0t,";
         baj = true;
         pozicio = Math.floor(Math.random() * (ujjelszo.length + 1));
         ujjelszo = ujjelszo.substring(0, pozicio) + Math.floor(Math.random() * 10) + ujjelszo.substring(pozicio);
     }
-    if (vanspec == false) {
+    if (vanspec === false) {
         kiiras = kiiras + " $peciáli$ karaktert (pl: .,!?),";
         baj = true;
-        ujjelszo = ujjelszo.substring(0, pozicio) + spec.substring(specpozicio, specpozicio+1) + ujjelszo.substring(pozicio);
+        ujjelszo = ujjelszo.substring(0, pozicio) + spec.substring(specpozicio, specpozicio + 1) + ujjelszo.substring(pozicio);
     }
     kiiras = kiiras.substring(0, (kiiras.length) - 1)
 
@@ -89,12 +89,12 @@ function jelszoEll() {
 
     document.getElementById("valasz").style.display = "inherit"
 
-    if (baj == true) {
+    if (baj === true) {
         document.getElementById("valasz").innerHTML = `${kiiras}`
     }
 
     else {
-        
+
         document.getElementById("valasz").innerHTML = `Ez egy szuper ötlet! Be is kerültél a sorsolásunkba!`
     }
 
